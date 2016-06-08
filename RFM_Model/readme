@@ -3,18 +3,21 @@ project brief description:
 This is a Recency, Frequency, Monetary customer segmentation model i built using python for clustering retailor customers. 
 A csv file containing 3 columns need to be created beforehand in order to generate result. 
 
-csv file description: column1 is recency(how many days passed since the customer purchased); column2 is customer id (c_id in the codes); 
-column3 is customer purchased amount in monetary value; The first row must be heading, followed by actual data. 
-You can enter whatever heading you prefer to the csv file 1st row.(eg:recency, customer_id, purchase_amount) 
+csv file description: column1 is recency(how many days passed since the customer purchased); column2 is customer id 
+(c_id in the codes); column3 is customer purchased amount in monetary value; The first row must be heading, followed by 
+actual data. You can enter whatever heading you prefer to the csv file 1st row.(eg:recency, customer_id, purchase_amount) 
 However, the order must be recency, c_id, and amount. 
 
 About output: output is a bar chart with x-axis for different type of customers (111,112,113,121,122,123,211...), y-axis is 
-the frequency of a particular type of customer. A segmentation of "331" means customer who shopped not long ago, fequently shopped at
-the store but with low purchase amount. For detailed explanation about RFM model please refer http://cdn.intechopen.com/pdfs/13162.pdf
-This customer segmentation chart can be used to see which type of customer a retailor had and what can be done to perform up-sell, 
-cross-sell, or customer re-activation to different customers.
+the frequency of a particular type of customer. A segmentation of "331" means customer who shopped not long ago, fequently 
+shopped at the store but with low purchase amount. For detailed explanation about RFM model please refer to 
+http://cdn.intechopen.com/pdfs/13162.pdf
+This customer segmentation chart can be used to see which type of customer a retailor had and what can be done to 
+perform up-sell, cross-sell, or customer re-activation to different customers.
 
 Till now, the max dataset i tried contained 35,000 transactions with 1,000 customers. It took about 10 min to run the code. 
 
+Further analysis can be done using association rules to find what products to promote to certain customers. In order to 
+achieve that, dataset containing detailed purchasing information (i.e. item number, item name) is required. 
 
 
