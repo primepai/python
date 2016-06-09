@@ -6,6 +6,7 @@ import csv
 import numpy as np
 import time
 import matplotlib.pyplot as plt
+import copy
 
 from collections import Counter
 # read csv file.
@@ -13,7 +14,7 @@ start_time=time.time()
 recency=[]
 c_id=[]
 amount=[]
-with open('rfm03.csv','rb') as f:
+with open('rfm08.csv','rb') as f:
     readcsv=csv.reader(f,delimiter=',')
 # append csv value to list 
     for row in readcsv:
@@ -111,6 +112,7 @@ for g in range(0,len(matrix03)):
   matrix03[g][7]=(4-matrix03[g][4])*100+matrix03[g][5]*10+matrix03[g][6]
 # matrix04 get rid of individual score for r, f, m but only keep total score rating. 
 matrix04=map(list,(np.array(matrix03))[:,[0,1,2,3,7]])
+
 #score=map(int,sorted(list(set(column(matrix04,4))),reverse=1))
 score=map(int,sorted(list(set(column(matrix04,4)))))
 score_to_count=map(list,(np.array(matrix03))[:,[7]])
@@ -165,20 +167,30 @@ best=[333,323,233]  # '333' '323' '233' type customers.
 customer_churn=[]
 customer_upsell=[]
 customer_best=[]
-for i3 in matrix04:
+matrix05=copy.deepcopy(matrix04)
+for i3 in matrix05:
     if int(i3[4]) in churn:
        customer_churn.append(i3)
     elif int(i3[4]) in upsell:
        customer_upsell.append(i3)
     elif int(i3[4]) in best:
        customer_best.append(i3)
-# add customer id to each customer segmentation       
+
+# add customer id to each customer segmentation     
 def customer_add_id(lista):
     listb=lista
     for i4 in listb:
         i4.extend([c_id_list2[i4[0]][1]])
-    return listb 
- 
+    order=np.argsort([1,3,4,5,2,0])
+    listc=[]
+    listd=[]
+    listc=np.array(listb)
+    if lista==[]:
+       listd=listc
+    else:
+        listd=listc[:,order]    
+    return listd
+
 file_name=['customer_churn.csv','customer_upsell.csv','customer_best.csv'] 
 
 # output customer segmentation to csv. 
@@ -191,9 +203,9 @@ for i5 in file_name:
             writer.writerows(customer_add_id(customer_upsell))
         elif i5=='customer_best.csv':
             writer.writerows(customer_add_id(customer_best))
-        
-        
-        
+  
+    
+ 
 
  
     
