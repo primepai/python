@@ -12,8 +12,7 @@ users = pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich
 
 
 r_cols=['user_id','item_id','rating','time_stamp']
-ratings=pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_study\\movie_2018\\ml-100k\\u.data', sep='\t', names=r_cols,
- encoding='latin-1')
+ratings=pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_study\\movie_2018\\ml-100k\\u.data', sep='\t', names=r_cols,encoding='latin-1')
 
 
 #print (type(ratings),ratings.shape)
