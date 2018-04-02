@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.spatial.distance import cosine
 from collections import OrderedDict #for sort key
 import operator
-movie_id_unseen=6
+movie_id_unseen=6 
 
 u_cols = ['user_id', 'age', 'sex', 'occupation', 'zip_code']
 users = pd.read_csv('H:\\01_self study_\
