@@ -5,14 +5,16 @@ import operator
 movie_id_unseen=6
 
 u_cols = ['user_id', 'age', 'sex', 'occupation', 'zip_code']
-users = pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_study\\movie_\
-2018\\ml-100k\\u.user', sep='|', names=u_cols,
- encoding='latin-1')
+users = pd.read_csv('H:\\01_self study_\
+flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_\
+study\\movie_2018\\ml-100k\\u.user', sep='|', names=u_cols,encoding='latin-1')
 #print (type(users),"shape is: ",users.shape)
 
 
 r_cols=['user_id','item_id','rating','time_stamp']
-ratings=pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_study\\movie_2018\\ml-100k\\u.data', sep='\t', names=r_cols,encoding='latin-1')
+ratings=pd.read_csv('H:\\01_self study_\
+flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018\
+_python3_study\\movie_2018\\ml-100k\\u.data', sep='\t', names=r_cols,encoding='latin-1')
 
 
 #print (type(ratings),ratings.shape)
@@ -22,7 +24,8 @@ i_cols=['item_id','item_title','release_date','video_release_date','imdb_url',
 'unknown','action','adventure','animi','children','comedy','crime','documen','drama',
 'fantasy','film-noir','horror','musical','myestery','romance','sci-fic','thriller',
 'war','western']
-items=pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_python3_study\\movie_2018\\ml-100k\\u.item', sep='|', names=i_cols,encoding='latin-1')
+items=pd.read_csv('H:\\01_self study_flash drive\\AAAschulich\\beyond_schulich\\practice\\2018\\udemy_hadoop\\2018_\
+python3_study\\movie_2018\\ml-100k\\u.item', sep='|', names=i_cols,encoding='latin-1')
 #print (items.head())
 '''
 # merge data sets
