@@ -3,7 +3,6 @@
 import requests
 from bs4 import BeautifulSoup 
 
-# Collect first page of artists’ list
 page = requests.get('https://toronto.ctvnews.ca/more/local-news')
 
 # Create a BeautifulSoup object
