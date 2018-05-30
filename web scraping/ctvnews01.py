@@ -23,3 +23,22 @@ for j in range(1,len(title_sum)):
     if 'video?' not in new_string:
         print(new_string[0:(len(new_string)-10)]+'.')
         print("")
+
+ # partial sample output
+'''
+hamilton police officer sentenced to 12 years for bribery cocaine trafficking.
+
+police identify victim of fatal shooting in yorkville.
+
+roseanne yanked from ctv lineup and streaming platforms.
+
+red sox beat blue jays 8 3.
+
+police release getaway route used by mississauga restaurant bombers.
+
+toronto police investigating music video that takes aim at ttc system.
+
+maple leafs winger zack hyman writes children s book about imagination.
+
+ndp sticks with brampton candidate photographed holding anti police sign.
+'''
