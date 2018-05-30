@@ -1,4 +1,4 @@
-#toronto ctv news crawler
+#GTA area ctv news updates
 
 import requests
 from bs4 import BeautifulSoup 
