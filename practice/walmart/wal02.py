@@ -179,23 +179,8 @@ print(f"classification accuracy: {round(accuracy,2)}")
 
 
 #naive bayes
-#since naive bayes not allow negative, i temporarily change here
+##since naive bayes not allow negative, have to skip the scaling
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0,stratify=y)
-def neg_to_zero(data_2_change:'nparray'):
-  data_new=[] 
-  item_temp=data_2_change.item_sum
-  for ele in item_temp:
-    if ele >=0:
-      data_new.append(ele)
-    else:
-      data_new.append(0)
-  data_2_change.item_sum=data_new
-  return data_2_change
-
-
-X_train=neg_to_zero(X_train)  
-X_test=neg_to_zero(X_test)
-
 
 from sklearn.naive_bayes import MultinomialNB
 mnb = MultinomialNB()
